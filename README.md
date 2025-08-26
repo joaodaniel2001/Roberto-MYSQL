@@ -32,5 +32,5 @@
     - ``DECIMAL:`` número decimal, de ponto fixo
         - **EX:** decimal (3,2) => 1,27
     - ``FLOAT:`` número de ponto flutuante de precisão simples (32 bits)
-    - ``BIT:`` campo de um bit:
+    - ``BIT:`` campo de um bit
     
