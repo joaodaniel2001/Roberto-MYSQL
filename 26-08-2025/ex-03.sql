@@ -84,5 +84,5 @@ CREATE TABLE Resultados (
     pontuacao FLOAT,
     medalha ENUM('Ouro', 'Prata', 'Bronze', 'Nenhuma') DEFAULT 'Nenhuma',
     
-    FOREIGN KEY (id_participacao_atleta) REFERENCES Participacoes(id_atleta) -- ERRO: esta FK precisa ser revista (veja observação abaixo)
+    FOREIGN KEY (id_participacao_atleta) REFERENCES Participacoes(id_atleta)
 );
