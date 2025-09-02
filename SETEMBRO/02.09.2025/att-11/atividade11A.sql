@@ -50,4 +50,3 @@ INSERT INTO Cliente (nome, sobrenome, cpf, sexo, telefone) VALUES
 	('Larissa', 'Nunes', 73777022327, 'F', 151),
 	('Maurício', 'Machado', 34933861580, 'M', 161);
     
-SELECT i > 18 FROM Cliente;
