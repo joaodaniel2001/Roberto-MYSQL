@@ -5,6 +5,7 @@
 
 - [Comandos](#comandos)
 - [DML](#dml)
+- [DDL](#ddl)
 
 <h3 id="comandos"> 📌 Comandos </h3>
 
@@ -43,7 +44,7 @@
 
     - Conjunto de comandos usados para **armazenar, modificar, recuperar, excluir e atualizar** dados em um banco de dados.
 
-<br>
+
 
 - **Comandos DML:**
     
@@ -71,3 +72,93 @@
     ```sql
     SELECT * FROM nome_da_tabela;  -- Seleciona todas as colunas
     ```
+
+<br>
+
+<h3 id="ddl"> 📌 DDL </h3>
+
+- **DDL:** Data Definition Language
+    - A DDL é usada para definir e gerenciar estruturas de dados, como bancos, tabelas e colunas.
+
+<br>
+
+- **Comandos DDL:**
+    - ``CREATE``: É usada para criar bancos de dados e tabelas.
+    ```sql
+    -- Criando o banco de dados
+    CREATE DATABASE nome_sql;
+
+    -- Criando uma tabela
+    CREATE TABLE nome_tabela (
+        -- atributos...
+    );
+    ```
+    
+    - ``ALTER``: A instrução é usada para modificar a estrutura de uma tabela já existente.  
+
+        - **ADD**: adiciona uma nova coluna  
+        ```sql
+        ALTER TABLE Pessoas
+        ADD email VARCHAR(150);
+        ```
+
+        - **MODIFY**: altera o tipo de dado ou restrição de uma coluna existente  
+        ```sql
+        ALTER TABLE Pessoas
+        MODIFY nome VARCHAR(200) NOT NULL;
+        ```
+
+        - **RENAME COLUMN**: renomeia uma coluna  
+        ```sql
+        ALTER TABLE Pessoas
+        RENAME COLUMN nome TO nome_completo;
+        ```
+
+        - **RENAME TABLE**: renomeia a tabela  
+        ```sql
+        ALTER TABLE Pessoas
+        RENAME TO Usuarios;
+        ```
+
+        - **DROP COLUMN**: remove uma coluna  
+        ```sql
+        ALTER TABLE Pessoas
+        DROP COLUMN altura;
+        ```
+
+    - ``UPDATE``: A instrução é usada para atualizar valores já existentes em uma tabela. 
+
+    ```sql
+    UPDATE nome_da_tabela
+    SET coluna_01 = novo_valor
+    WHERE condição;
+    ```
+
+    ```sql
+    UPDATE Pessoas
+    SET peso = 85.0, altura = 1.75
+    WHERE id = 1;
+    ```
+
+    - ``DELETE``: A instrução é usada para remover registros de uma tabela.  
+
+    ```sql
+    DELETE FROM nome_da_tabela
+    WHERE condição;
+    ```
+
+    ```sql
+    DELETE FROM Pessoas
+    WHERE id = 1;
+    ```
+
+    - ``DROP``: A instrução é usada para remover bancos de dados ou tabelas existentes. 
+    
+    ```sql
+    -- Excluindo tabela
+    DROP TABLE Pessoas;
+
+    -- Excluindo banco de dados
+    DROP DATABASE exemplo_sql;
+    ```
+<br>
